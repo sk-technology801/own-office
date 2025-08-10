@@ -23,27 +23,27 @@ export default function Portfolio() {
       title: "E-Commerce Platform",
       description: "Full-stack application with payment integration and real-time inventory",
       tech: ["Next.js", "TypeScript", "Prisma", "Stripe"],
-      image: '/images/cloud.jpg',
+      image: '/images/ecomerace.jpg.jpeg', // Ensure this file exists in public/images/
       color: "from-purple-500 to-pink-500",
-      liveUrl: "https://ecomerace-demo.vercel.app",
+      liveUrl: "https://e-com-wgmy.vercel.app/",
       codeUrl: "https://github.com/alexchen/ecommerce-platform"
     },
     {
-      title: "AI Dashboard",
-      description: "Machine learning analytics platform with interactive visualizations",
+      title: "Bitcoin",
+      description: "Trading generate extreme money ",
       tech: ["React", "Python", "TensorFlow", "D3.js"],
-      image: "/api/placeholder/600/400",
+      image: "/images/bitcoin.jpg.jpeg", // Ensure this file exists in public/images/
       color: "from-blue-500 to-cyan-500",
-      liveUrl: "https://ai-dashboard-demo.netlify.app",
+      liveUrl: "https://own-trading.vercel.app/",
       codeUrl: "https://github.com/alexchen/ai-dashboard"
     },
     {
-      title: "Mobile Banking App",
-      description: "Secure financial application with biometric authentication",
+      title: "Car-hub",
+      description: "Dealing of cars",
       tech: ["React Native", "Node.js", "MongoDB", "JWT"],
-      image: "/api/placeholder/600/400",
+      image: "/images/car-hub.jpeg", // Ensure this file exists in public/images/
       color: "from-green-500 to-emerald-500",
-      liveUrl: "https://banking-app-demo.herokuapp.com",
+      liveUrl: "",
       codeUrl: "https://github.com/alexchen/mobile-banking"
     }
   ];
@@ -98,7 +98,7 @@ export default function Portfolio() {
               <div className="mb-6">
                 <span className="text-purple-400 text-lg font-medium">Hello, I'm</span>
                 <h1 className="text-6xl md:text-7xl font-bold mt-2 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent leading-tight">
-                  Alex Chen
+                  Saad
                 </h1>
                 <p className="text-xl md:text-2xl text-slate-300 mt-4 leading-relaxed">
                   Full-Stack Developer & Digital Craftsman
@@ -127,17 +127,7 @@ export default function Portfolio() {
                 </a>
               </div>
 
-              <div className="flex space-x-6">
-                {[
-                  { Icon: Github, url: "https://github.com/alexchen" },
-                  { Icon: Linkedin, url: "https://linkedin.com/in/alexchen-dev" },
-                  { Icon: Mail, url: "mailto:alex.chen@example.com" }
-                ].map(({ Icon, url }, index) => (
-                  <a key={index} href={url} target="_blank" rel="noopener noreferrer" className="p-3 border border-gray-700 rounded-full hover:border-purple-400 hover:text-purple-400 transition-all duration-300">
-                    <Icon className="w-5 h-5" />
-                  </a>
-                ))}
-              </div>
+             
             </div>
 
             <div className={`transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'}`}>
@@ -145,9 +135,10 @@ export default function Portfolio() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 via-cyan-500 to-pink-500 rounded-2xl blur opacity-30 animate-pulse"></div>
                 <div className="relative bg-gray-900 rounded-2xl p-2 shadow-2xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&crop=face" 
+                    src="/images/profile.jpg" // Use a local image in public/images/
                     alt="Alex Chen - Full Stack Developer"
                     className="w-full h-96 md:h-[500px] object-cover rounded-xl"
+                    onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&crop=face"; }} // Fallback to Unsplash
                   />
                   <div className="absolute top-4 right-4 px-4 py-2 bg-black/80 backdrop-blur-sm rounded-full text-sm">
                     <div className="flex items-center space-x-2">
@@ -160,7 +151,7 @@ export default function Portfolio() {
             </div>
           </div>
           
-                      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <ChevronDown className="w-8 h-8 text-gray-400" />
           </div>
         </section>
@@ -187,9 +178,12 @@ export default function Portfolio() {
                   
                   <div className="relative p-6">
                     <div className="h-48 bg-gray-800 rounded-lg mb-6 overflow-hidden">
-                      <div className="w-full h-full bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
-                        <Code className="w-16 h-16 text-gray-500" />
-                      </div>
+                      <img 
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                        onError={(e) => { e.target.src = '/images/fallback.jpg'; }} // Fallback image
+                      />
                     </div>
                     
                     <h3 className="text-xl font-bold mb-3 text-white transition-colors">
