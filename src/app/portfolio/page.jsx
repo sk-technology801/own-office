@@ -135,7 +135,7 @@ export default function Portfolio() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 via-cyan-500 to-pink-500 rounded-2xl blur opacity-30 animate-pulse"></div>
                 <div className="relative bg-gray-900 rounded-2xl p-2 shadow-2xl">
                   <img 
-                    src="/images/profile.jpg" // Use a local image in public/images/
+                    src="/images/sk.jpeg" // Use a local image in public/images/
                     alt="Alex Chen - Full Stack Developer"
                     className="w-full h-96 md:h-[500px] object-cover rounded-xl"
                     onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&crop=face"; }} // Fallback to Unsplash
@@ -278,12 +278,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="py-8 px-6 border-t border-gray-800/50">
-          <div className="max-w-7xl mx-auto text-center text-gray-400">
-            <p>&copy; 2024 Alex Chen. Crafted with passion and precision.</p>
-          </div>
-        </footer>
+        
       </div>
     </div>
   );

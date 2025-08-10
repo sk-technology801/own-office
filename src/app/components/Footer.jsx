@@ -11,16 +11,16 @@ export default function Footer() {
           {/* Brand + Social */}
           <div className="sm:col-span-2">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">
-              Code<span className="text-blue-400">Zap</span>
+              Next<span className="text-blue-400">Inovation</span>
             </h3>
             <p className="text-gray-400 mb-4 max-w-md text-sm sm:text-base">
               Digital architects building the future, one line of code at a time.
             </p>
             <div className="flex space-x-4">
               {[
-                { name: 'LinkedIn', href: 'https://linkedin.com', icon: '💼' },
+                { name: 'LinkedIn', href: 'https://www.linkedin.com/in/sk-technology-05080b338/', icon: '💼' },
                 { name: 'Twitter', href: 'https://twitter.com', icon: '🐦' },
-                { name: 'GitHub', href: 'https://github.com', icon: '💻' },
+                { name: 'GitHub', href: 'https://github.com/', icon: '💻' },
                 { name: 'Dribbble', href: 'https://dribbble.com', icon: '🎨' },
               ].map((social) => (
                 <a
@@ -39,7 +39,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4 text-base sm:text-lg">Quick Links</h4>
             <div className="space-y-2">
-              {['Home', 'About', 'Portfolio', 'Testimonials', 'Process'].map((link) => (
+              {['Home', 'About', 'Portfolio', 'contact',].map((link) => (
                 <a
                   key={link}
                   href={`/${link.toLowerCase()}`}
@@ -57,7 +57,7 @@ export default function Footer() {
         <div className="border-t border-gray-900 pt-6 sm:pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <div className="text-gray-500 text-sm mb-4 sm:mb-0">
-              © 2025 CodeZap. All rights reserved.
+              © 2025 Next Inovation. All rights reserved.
             </div>
             <div className="flex space-x-4 sm:space-x-6 text-sm">
               {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((link) => (

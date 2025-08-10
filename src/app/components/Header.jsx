@@ -21,7 +21,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo on the left */}
         <div className="flex items-center">
-          <Link href="/">
+          <Link href="/images/logo.png">
             <span className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
               Next Inovation
             </span>

@@ -31,7 +31,7 @@ export default function Contact() {
           <div
             className="absolute inset-0 bg-cover bg-center opacity-30"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1516321310762-4794370f9795?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')`,
+              backgroundImage: `url('https://images.pexels.com/photos/33349204/pexels-photo-33349204.jpeg?_gl=1*hoayzx*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTQ4NjA5ODkkbzU0JGcxJHQxNzU0ODYxMDMzJGoxNiRsMCRoMA..')`,
             }}
           />
           {/* Gradient Overlay */}
@@ -211,17 +211,17 @@ export default function Contact() {
             {[
               {
                 title: "Location",
-                content: "Tech Hub, Silicon Valley, CA 94107",
+                content: "Kohinoor1,Faisalabad",
                 icon: "📍",
               },
               {
                 title: "Email",
-                content: "info@codeforge.com",
+                content: "sardarsaadisaadi@gmail.com",
                 icon: "✉️",
               },
               {
                 title: "Phone",
-                content: "+1 (555) 987-6543",
+                content: "+92 3084931083",
                 icon: "📞",
               },
             ].map((info, index) => (
