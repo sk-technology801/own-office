@@ -1,12 +1,10 @@
 "use client";
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import Header from '../components/Header';
 
 export default function Home() {
   return (
     <div className="bg-black text-white min-h-screen">
-      <Header />
 
       {/* Unique Hero Section */}
       <section className="relative h-screen bg-black overflow-hidden">
@@ -142,14 +140,14 @@ export default function Home() {
                 image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
               },
               {
-                title: 'Healthcare Portal',
+                title: 'Bitcoin',
                 category: 'Mobile & Web',
-                image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+                image: '/images/bitcoin.jpg.jpeg',
               },
               {
                 title: 'E-Commerce Platform',
                 category: 'Full Stack',
-                image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+                image: '/images/ecomerace.jpg.jpeg',
               },
             ].map((project, index) => (
               <div
@@ -197,7 +195,7 @@ export default function Home() {
           <div className="space-y-12">
             {[
               {
-                quote: "CodeZap transformed our vision into reality with exceptional precision and creativity.",
+                quote: "Next Inovation transformed our vision into reality with exceptional precision and creativity.",
                 author: "Sarah Chen",
                 company: "TechStart Inc."
               },
@@ -300,25 +298,7 @@ export default function Home() {
             </Link>
           </div>
           
-          <div className="flex justify-center space-x-8 mb-8">
-            {[
-              { name: 'LinkedIn', href: '#' },
-              { name: 'Twitter', href: '#' },
-              { name: 'GitHub', href: '#' },
-            ].map((social) => (
-              <a
-                key={social.name}
-                href={social.href}
-                className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
-              >
-                {social.name}
-              </a>
-            ))}
-          </div>
           
-          <div className="text-center text-gray-500 text-sm">
-            © 2025 CodeZap. All rights reserved.
-          </div>
         </div>
       </footer>
 

@@ -1,3 +1,4 @@
+
 // components/Footer.jsx
 export default function Footer() {
   return (
@@ -5,7 +6,7 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto">
         
         {/* Top Footer Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
           
           {/* Brand + Social */}
           <div className="sm:col-span-2">
@@ -50,20 +51,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="text-white font-semibold mb-4 text-base sm:text-lg">Services</h4>
-            <div className="space-y-2">
-              {['Web Development', 'Mobile Apps', 'UI/UX Design', 'Cloud Solutions', 'Consulting'].map((service) => (
-                <span
-                  key={service}
-                  className="block text-gray-400 text-sm sm:text-base"
-                >
-                  {service}
-                </span>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* Bottom Footer */}

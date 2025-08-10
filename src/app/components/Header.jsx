@@ -23,7 +23,7 @@ const Header = () => {
         <div className="flex items-center">
           <Link href="/">
             <span className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
-              CodeZap
+              Next Inovation
             </span>
           </Link>
         </div>
