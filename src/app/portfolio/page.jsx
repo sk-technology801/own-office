@@ -26,26 +26,110 @@ export default function Portfolio() {
       image: '/images/ecomerace.jpg.jpeg', // Ensure this file exists in public/images/
       color: "from-purple-500 to-pink-500",
       liveUrl: "https://e-com-wgmy.vercel.app/",
-      codeUrl: "https://github.com/alexchen/ecommerce-platform"
+      codeUrl: "https://github.com/sk-technology801/e-com"
     },
-    {
-      title: "Bitcoin",
-      description: "Trading generate extreme money ",
-      tech: ["React", "Python", "TensorFlow", "D3.js"],
-      image: "/images/bitcoin.jpg.jpeg", // Ensure this file exists in public/images/
-      color: "from-blue-500 to-cyan-500",
-      liveUrl: "https://own-trading.vercel.app/",
-      codeUrl: "https://github.com/alexchen/ai-dashboard"
+
+
+ {
+      title: "Blogs",
+      description: "Insights for modern businesses",
+      tech: ["React Native", "Node.js", "MongoDB", "JWT"],
+      image: "/images/blog site.jpeg", // Ensure this file exists in public/images/
+      color: "from-green-500 to-emerald-500",
+      liveUrl: "https://blog-site-tau-khaki.vercel.app/",
+      codeUrl: "https://github.com/sk-technology801/blog-site"
     },
+
+
+
+
+
     {
       title: "Car-hub",
       description: "Dealing of cars",
       tech: ["React Native", "Node.js", "MongoDB", "JWT"],
       image: "/images/car-hub.jpeg", // Ensure this file exists in public/images/
       color: "from-green-500 to-emerald-500",
-      liveUrl: "",
-      codeUrl: "https://github.com/alexchen/mobile-banking"
-    }
+      liveUrl: "https://hub-orpin.vercel.app/",
+      codeUrl: "https://github.com/sk-technology801/hub"
+    },
+    
+
+     {
+      title: "Bitcoin",
+      description: "Trading generate extreme money ",
+      tech: ["React", "Python", "TensorFlow", "D3.js"],
+      image: "/images/bitcoin.jpg.jpeg", // Ensure this file exists in public/images/
+      color: "from-blue-500 to-cyan-500",
+      liveUrl: "https://own-trading.vercel.app/",
+      codeUrl: "https://github.com/sk-technology801/own-trading"
+    },
+     {
+      title: "Automotives",
+      description: "Dealing of cars",
+      tech: ["React Native", "Node.js", "MongoDB", "JWT"],
+      image: "/images/auto-dealer.jpg.jpeg", // Ensure this file exists in public/images/
+      color: "from-green-500 to-emerald-500",
+      liveUrl: "https://car-zone-fcvj.vercel.app/",
+      codeUrl: "https://github.com/sk-technology801/car-zone"
+    },
+     {
+      title: "Bussiness-Insight",
+      description: "Fresh perspectives for growth",
+      tech: ["React Native", "Node.js", "MongoDB", "JWT"],
+      image: "/images/bussiness-insight.jpg.jpeg", // Ensure this file exists in public/images/
+      color: "from-green-500 to-emerald-500",
+      liveUrl: "https://site-for-bussiness.vercel.app/analytics",
+      codeUrl: "https://github.com/sk-technology801/site-for-bussiness"
+    },
+
+{
+      title: "Tourism",
+      description: "Strategic Growth Tips",
+      tech: ["React Native", "Node.js", "MongoDB", "JWT"],
+      image: "/images/travel.jpeg", // Ensure this file exists in public/images/
+      color: "from-green-500 to-emerald-500",
+      liveUrl: "https://events-lzch.vercel.app/",
+      codeUrl: "https://github.com/sk-technology801/events"
+    },
+
+     {
+      title: "Dashboard-Business",
+      description: "Fresh perspectives for growth",
+      tech: ["React Native", "Node.js", "MongoDB", "JWT"],
+      image: "/images/dashbord bussiness.jpeg", // Ensure this file exists in public/images/
+      color: "from-green-500 to-emerald-500",
+      liveUrl: "https://site-for-bussiness.vercel.app/analytics",
+      codeUrl: "https://github.com/sk-technology801/site-for-bussiness"
+    },
+     {
+      title: "Site-code",
+      description: "Strategic Growth Tips",
+      tech: ["React Native", "Node.js", "MongoDB", "JWT"],
+      image: "/images/office site.jpeg", // Ensure this file exists in public/images/
+      color: "from-green-500 to-emerald-500",
+      liveUrl: "https://our-office-tau.vercel.app/Team",
+      codeUrl: "https://github.com/sk-technology801/our-office"
+    },
+      {
+      title: "Tech-Program",
+      description: "Strategic Growth Tips",
+      tech: ["React Native", "Node.js", "MongoDB", "JWT"],
+      image: "/images/software house.jpeg", // Ensure this file exists in public/images/
+      color: "from-green-500 to-emerald-500",
+      liveUrl: "https://office-wmem.vercel.app/",
+      codeUrl: "https://github.com/sk-technology801/office"
+    },
+     
+     {
+      title: "Dashboard-Business",
+      description: "Fresh perspectives for growth",
+      tech: ["React Native", "Node.js", "MongoDB", "JWT"],
+      image: "/images/dashbord bussiness.jpeg", // Ensure this file exists in public/images/
+      color: "from-green-500 to-emerald-500",
+      liveUrl: "https://site-for-bussiness.vercel.app/analytics",
+      codeUrl: "https://github.com/sk-technology801/site-for-bussiness"
+    },
   ];
 
   const skills = [
