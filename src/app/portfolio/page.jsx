@@ -65,13 +65,13 @@ export default function Portfolio() {
       codeUrl: "https://github.com/sk-technology801/own-trading"
     },
      {
-      title: "Automotives",
-      description: "Dealing of cars",
+      title: "Govt-Agency",
+      description: "You’re building a platform for government use",
       tech: ["React Native", "Node.js", "MongoDB", "JWT"],
-      image: "/images/auto-dealer.jpg.jpeg", // Ensure this file exists in public/images/
+      image: "/images/govt-agency.jpg.jpeg", // Ensure this file exists in public/images/
       color: "from-green-500 to-emerald-500",
       liveUrl: "https://car-zone-fcvj.vercel.app/",
-      codeUrl: "https://github.com/sk-technology801/car-zone"
+      codeUrl: "https://github.com/sk-technology801/state-agency"
     },
      {
       title: "Bussiness-Insight",
@@ -93,15 +93,7 @@ export default function Portfolio() {
       codeUrl: "https://github.com/sk-technology801/events"
     },
 
-     {
-      title: "Dashboard-Business",
-      description: "Fresh perspectives for growth",
-      tech: ["React Native", "Node.js", "MongoDB", "JWT"],
-      image: "/images/dashbord bussiness.jpeg", // Ensure this file exists in public/images/
-      color: "from-green-500 to-emerald-500",
-      liveUrl: "https://site-for-bussiness.vercel.app/analytics",
-      codeUrl: "https://github.com/sk-technology801/site-for-bussiness"
-    },
+    
      {
       title: "Site-code",
       description: "Strategic Growth Tips",
@@ -129,6 +121,24 @@ export default function Portfolio() {
       color: "from-green-500 to-emerald-500",
       liveUrl: "https://site-for-bussiness.vercel.app/analytics",
       codeUrl: "https://github.com/sk-technology801/site-for-bussiness"
+    },
+     {
+      title: "Adsen",
+      description: "Submit your site for approval.",
+      tech: ["React Native", "Node.js", "MongoDB", "JWT"],
+      image: "/images/adds.jpeg", // Ensure this file exists in public/images/
+      color: "from-green-500 to-emerald-500",
+      liveUrl: "https://add-sk-technology801s-projects.vercel.app/",
+      codeUrl: "https://github.com/sk-technology801/add"
+    },
+     {
+      title: "Automotives",
+      description: "Dealing of cars",
+      tech: ["React Native", "Node.js", "MongoDB", "JWT"],
+      image: "/images/auto-dealer.jpg.jpeg", // Ensure this file exists in public/images/
+      color: "from-green-500 to-emerald-500",
+      liveUrl: "https://car-zone-fcvj.vercel.app/",
+      codeUrl: "https://github.com/sk-technology801/car-zone"
     },
   ];
 
