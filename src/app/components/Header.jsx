@@ -44,7 +44,7 @@ const Header = () => {
         {/* Get Started Button (Desktop) */}
         <div className="hidden lg:block">
           <Link
-            href="/get-started"
+            href="/contact"
             className="bg-white text-black px-4 py-2 rounded-full font-semibold text-sm hover:bg-gray-200 transition-all duration-300 transform hover:scale-105"
           >
             Get Started

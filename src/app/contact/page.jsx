@@ -1,14 +1,15 @@
+// src/app/contact/page.jsx
 
 "use client";
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    projectType: '',
-    message: '',
+    name: "",
+    email: "",
+    projectType: "",
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -17,78 +18,68 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
+    alert("Thank you! We'll contact you soon.");
+    setFormData({ name: "", email: "", projectType: "", message: "" });
   };
 
   return (
     <div className="bg-black text-white min-h-screen">
-      {/* Hero Section */}
+
+      {/* HERO SECTION – Fixed + Floating Card Wapas */}
       <section className="relative h-screen bg-black overflow-hidden">
-        {/* Subtle Background Effects */}
+        {/* Background Image & Effects */}
         <div className="absolute inset-0">
-          {/* Background Image with Dark Overlay */}
           <div
             className="absolute inset-0 bg-cover bg-center opacity-30"
             style={{
-              backgroundImage: `url('https://images.pexels.com/photos/33349204/pexels-photo-33349204.jpeg?_gl=1*hoayzx*_ga*MTU3NjA0MjQ0NS4xNzUwMzMyOTg3*_ga_8JE65Q40S6*czE3NTQ4NjA5ODkkbzU0JGcxJHQxNzU0ODYxMDMzJGoxNiRsMCRoMA..')`,
+              backgroundImage: `url('https://images.pexels.com/photos/33349204/pexels-photo-33349204.jpeg')`,
             }}
           />
-          {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
-          {/* Minimal Animated Elements */}
           <div className="absolute top-16 left-1/5 w-16 h-16 bg-blue-500/10 rounded-full animate-float-slow"></div>
           <div className="absolute bottom-24 right-1/5 w-12 h-12 border border-purple-500/20 animate-pulse-slow"></div>
         </div>
 
-        {/* Content Container */}
-        <div className="relative z-10 flex h-full items-center justify-center px-6 lg:px-12">
-          <div className="max-w-3xl text-center">
-            
-
-            {/* Main Title */}
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+        {/* Main Content – Safe from Navbar */}
+        <div className="relative z-10 flex h-full items-center justify-center px-6 lg:px-12 pt-20 md:pt-24">
+          <div className="max-w-3xl text-center space-y-10">
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
               <span className="text-white">Build with</span>
               <br />
-              <span className="text-transparent bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text">Confidence</span>
+              <span className="text-transparent bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text">
+                Confidence
+              </span>
             </h1>
 
-            {/* Subtitle */}
-            <p
-              className="text-lg md:text-xl text-gray-400 mb-10 leading-relaxed max-w-xl mx-auto animate-slide-up"
-              style={{ animationDelay: '200ms' }}
-            >
-              Partner with our software house to transform your ideas into <span className="text-white font-medium">cutting-edge solutions</span>. Let’s connect.
+            <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-xl mx-auto">
+              Partner with our software house to transform your ideas into{" "}
+              <span className="text-white font-medium">cutting-edge solutions</span>. Let’s connect.
             </p>
 
-            {/* Contact Metrics */}
-            <div className="grid grid-cols-3 gap-6 mb-10 animate-slide-up" style={{ animationDelay: '400ms' }}>
+            <div className="grid grid-cols-3 gap-6 mb-10">
               {[
-                { number: '200+', label: 'Projects Delivered' },
-                { number: '98%', label: 'Client Satisfaction' },
-                { number: '<12h', label: 'Response Time' },
-              ].map((stat, index) => (
-                <div
-                  key={index}
-                  className="text-center group relative p-4 bg-gray-900/50 rounded-lg hover:bg-gray-900/80 transition-all duration-300"
-                >
+                { number: "200+", label: "Projects Delivered" },
+                { number: "98%", label: "Client Satisfaction" },
+                { number: "<12h", label: "Response Time" },
+              ].map((stat, i) => (
+                <div key={i} className="text-center p-4 bg-gray-900/50 rounded-lg hover:bg-gray-900/80 transition-all duration-300">
                   <div className="text-2xl font-bold text-white group-hover:text-blue-400">{stat.number}</div>
                   <div className="text-gray-400 text-sm">{stat.label}</div>
                 </div>
               ))}
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '600ms' }}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="mailto:info@codeforge.com"
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg text-center hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                href="mailto:sardarsaadisaadi@gmail.com"
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
               >
                 Email Us
               </Link>
               <Link
                 href="#form"
-                className="px-8 py-4 border-2 border-gray-600 text-white font-medium rounded-lg text-center hover:border-blue-500 hover:bg-blue-500/10 transition-all duration-300"
+                className="px-8 py-4 border-2 border-gray-600 text-white font-medium rounded-lg hover:border-blue-500 hover:bg-blue-500/10 transition-all duration-300"
               >
                 Get a Quote
               </Link>
@@ -96,93 +87,58 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Floating Contact Card */}
-        <div className="absolute bottom-10 right-10 bg-gray-900/80 backdrop-blur-sm rounded-xl p-6 max-w-xs border border-gray-700 animate-float-slow">
+        {/* Floating Quick Connect Card */}
+        <div className="absolute bottom-10 right-10 bg-gray-900/80 backdrop-blur-sm rounded-xl p-6 max-w-xs border border-gray-700 animate-float-slow hidden lg:block">
           <div className="flex items-center mb-3">
-            <div className="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+            <div className="w-3 h-3 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
             <span className="text-white font-medium">Quick Connect</span>
           </div>
           <h3 className="text-white text-lg font-bold mb-2">Instant Support</h3>
           <p className="text-gray-400 text-sm">Chat with our team for immediate assistance.</p>
-          <Link
-            href="#chat"
-            className="inline-block mt-4 text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors duration-300"
-          >
+          <Link href="#" className="inline-block mt-4 text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors">
             Start Chat →
           </Link>
         </div>
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 px-6 bg-gray-900 relative overflow-hidden">
-        {/* Subtle Background Effects */}
-        <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-16 h-16 bg-blue-500/10 rounded-full animate-pulse-slow"></div>
-          <div className="absolute top-1/2 right-20 w-12 h-12 border border-purple-500/20 animate-spin-slow"></div>
-        </div>
-
-        <div className="max-w-4xl mx-auto relative z-10">
+      <section id="form" className="py-20 px-6 bg-gray-900 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light mb-4 text-white hover:text-blue-400 transition-colors duration-300">
-              Let’s Discuss Your Project
-            </h2>
-            <p className="text-gray-400 text-lg animate-fade-in">Share your vision, and we’ll make it reality.</p>
+            <h2 className="text-4xl md:text-5xl font-light mb-4 text-white">Let’s Discuss Your Project</h2>
+            <p className="text-gray-400 text-lg">Share your vision, and we’ll make it reality.</p>
           </div>
 
           <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6 animate-slide-up" style={{ animationDelay: '0ms' }}>
-              <div className="group">
-                <label className="block text-gray-400 mb-2 group-hover:text-white transition-colors duration-300">Your Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg text-white focus:border-blue-500 focus:outline-none transition-all duration-300 group-hover:border-blue-400"
-                  required
-                />
-              </div>
-              <div className="group">
-                <label className="block text-gray-400 mb-2 group-hover:text-white transition-colors duration-300">Your Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg text-white focus:border-blue-500 focus:outline-none transition-all duration-300 group-hover:border-blue-400"
-                  required
-                />
-              </div>
+            <div className="space-y-6">
+              <input
+                type="text" name="name" value={formData.name} onChange={handleChange} required
+                placeholder="Your Name"
+                className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg text-white focus:border-blue-500 focus:outline-none transition-all"
+              />
+              <input
+                type="email" name="email" value={formData.email} onChange={handleChange} required
+                placeholder="Your Email"
+                className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg text-white focus:border-blue-500 focus:outline-none transition-all"
+              />
             </div>
-            <div className="space-y-6 animate-slide-up" style={{ animationDelay: '200ms' }}>
-              <div className="group">
-                <label className="block text-gray-400 mb-2 group-hover:text-white transition-colors duration-300">Project Type</label>
-                <select
-                  name="projectType"
-                  value={formData.projectType}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg text-white focus:border-blue-500 focus:outline-none transition-all duration-300 group-hover:border-blue-400"
-                  required
-                >
-                  <option value="" disabled>Select Project Type</option>
-                  <option value="web">Web Development</option>
-                  <option value="mobile">Mobile App</option>
-                  <option value="ai">AI/ML Solutions</option>
-                  <option value="cloud">Cloud Services</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div className="group">
-                <label className="block text-gray-400 mb-2 group-hover:text-white transition-colors duration-300">Your Message</label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows="5"
-                  className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg text-white focus:border-blue-500 focus:outline-none transition-all duration-300 group-hover:border-blue-400"
-                  required
-                ></textarea>
-              </div>
+            <div className="space-y-6">
+              <select
+                name="projectType" value={formData.projectType} onChange={handleChange} required
+                className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg text-white focus:border-blue-500 focus:outline-none transition-all"
+              >
+                <option value="" disabled>Select Project Type</option>
+                <option>Web Development</option>
+                <option>Mobile App</option>
+                <option>AI/ML Solutions</option>
+                <option>Cloud Services</option>
+                <option>Other</option>
+              </select>
+              <textarea
+                name="message" value={formData.message} onChange={handleChange} rows="5" required
+                placeholder="Your Message"
+                className="w-full px-4 py-3 bg-black/50 border border-gray-700 rounded-lg text-white focus:border-blue-500 focus:outline-none transition-all resize-none"
+              ></textarea>
               <button
                 type="submit"
                 className="w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
@@ -194,134 +150,64 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Contact Info Section */}
-      <section className="py-20 px-6 bg-black relative overflow-hidden">
-        {/* Subtle Background Effects */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 right-1/4 w-20 h-20 bg-blue-500/10 rounded-full animate-float-slow"></div>
-          <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-purple-500/10 rounded-full animate-float-reverse"></div>
-        </div>
-
-        <div className="max-w-5xl mx-auto relative z-10">
-          <h2 className="text-4xl font-light text-center mb-16 text-white hover:text-blue-400 transition-colors duration-300">
-            Our Contact Details
-          </h2>
+      {/* Contact Info + Google Map */}
+      <section className="py-20 px-6 bg-black">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-light text-center mb-16 text-white">Our Contact Details</h2>
           
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-3 gap-12 mb-16">
             {[
-              {
-                title: "Location",
-                content: "Kohinoor1,Faisalabad",
-                icon: "📍",
-              },
-              {
-                title: "Email",
-                content: "sardarsaadisaadi@gmail.com",
-                icon: "✉️",
-              },
-              {
-                title: "Phone",
-                content: "+92 3084931083",
-                icon: "📞",
-              },
-            ].map((info, index) => (
-              <div
-                key={index}
-                className="text-center group hover:scale-105 transition-all duration-300 animate-fade-in-up"
-                style={{ animationDelay: `${index * 200}ms` }}
-              >
-                <div className="text-3xl mb-4 group-hover:text-blue-400 transition-colors duration-300">{info.icon}</div>
+              { icon: "Location", title: "Location", content: "Kohinoor 1, Faisalabad, Pakistan" },
+              { icon: "Email", title: "Email", content: "saaddst21@gmail.com" },
+              { icon: "Phone", title: "Phone", content: "+92 308 493 1083" },
+            ].map((info, i) => (
+              <div key={i} className="text-center">
+                <div className="text-5xl mb-4">{info.icon}</div>
                 <h3 className="text-xl font-medium text-white mb-2">{info.title}</h3>
-                <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">{info.content}</p>
+                <p className="text-gray-400">{info.content}</p>
               </div>
             ))}
           </div>
 
-          {/* Embedded Map */}
-          <div className="mt-16 rounded-xl overflow-hidden animate-slide-up" style={{ animationDelay: '600ms' }}>
+          {/* Google Map */}
+          <div className="rounded-xl overflow-hidden border border-gray-700 shadow-2xl">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086738674485!2d-122.419415684681!3d37.774929779759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2us!4v1690000000000"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.884221995997!2d73.105030615194!3d31.418711981406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3922681b5e5c5e9f%3A0xbeca0e5e5e5e5e5e!2sKohinoor%20One%2C%20Faisalabad!5e0!3m2!1sen!2s!4v1731234567890"
               width="100%"
-              height="400"
-              style={{ border: 0 }}
+              height="450"
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="border border-gray-700 hover:border-blue-500 transition-colors duration-300"
+              className="grayscale hover:grayscale-0 transition-all duration-500"
             ></iframe>
           </div>
         </div>
       </section>
 
-      
-
       {/* Footer */}
-      <footer className="py-16 px-6 bg-black border-t border-gray-800">
-        <div className="max-w-5xl mx-auto text-center">
-          <h3 className="text-2xl font-light text-white mb-4">Ready to Start?</h3>
-          <p className="text-gray-400 mb-8">Let’s build something extraordinary together.</p>
-          <Link
-            href="/"
-            className="inline-block px-8 py-3 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-colors duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
-          >
-            Back to Home
-          </Link>
-        </div>
+      <footer className="py-16 px-6 bg-black border-t border-gray-800 text-center">
+        <h3 className="text-2xl font-light text-white mb-4">Ready to Start?</h3>
+        <p className="text-gray-400 mb-8">Let’s build something extraordinary together.</p>
+        <Link
+          href="/"
+          className="inline-block px-8 py-3 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-colors duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+        >
+          Back to Home
+        </Link>
       </footer>
 
+      {/* Animations */}
       <style jsx>{`
-        /* Custom Animations */
         @keyframes float-slow {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-10px); }
-        }
-        @keyframes float-reverse {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(10px); }
-        }
-        @keyframes fade-in {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        @keyframes slide-up {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
         }
         @keyframes pulse-slow {
           0%, 100% { opacity: 0.2; }
           50% { opacity: 0.1; }
         }
-        @keyframes spin-slow {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-        @keyframes bounce-slow {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-8px); }
-        }
-
-        .animate-float-slow {
-          animation: float-slow 5s ease-in-out infinite;
-        }
-        .animate-float-reverse {
-          animation: float-reverse 6s ease-in-out infinite;
-        }
-        .animate-fade-in {
-          animation: fade-in 1s ease-out forwards;
-        }
-        .animate-slide-up {
-          animation: slide-up 0.8s ease-out forwards;
-          opacity: 0;
-        }
-        .animate-pulse-slow {
-          animation: pulse-slow 4s ease-in-out infinite;
-        }
-        .animate-spin-slow {
-          animation: spin-slow 20s linear infinite;
-        }
-        .animate-bounce-slow {
-          animation: bounce-slow 3s ease-in-out infinite;
-        }
+        .animate-float-slow { animation: float-slow 5s ease-in-out infinite; }
+        .animate-pulse-slow { animation: pulse-slow 4s ease-in-out infinite; }
       `}</style>
     </div>
   );
