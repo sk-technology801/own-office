@@ -20,7 +20,7 @@ export default function Footer() {
               {[
                 { name: 'LinkedIn', href: 'https://www.linkedin.com/in/sk-technology-05080b338/', icon: '💼' },
                 { name: 'Twitter', href: 'https://twitter.com', icon: '🐦' },
-                { name: 'GitHub', href: 'https://github.com/', icon: '💻' },
+                { name: 'GitHub', href: 'https://github.com/sk-technology801?tab=repositories', icon: '💻' },
                 { name: 'Dribbble', href: 'https://dribbble.com', icon: '🎨' },
               ].map((social) => (
                 <a
